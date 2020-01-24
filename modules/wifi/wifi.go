@@ -519,7 +519,8 @@ func (mod *WiFiModule) Configure() error {
 					continue
 				}
 				if setRFMonMaybeFatal {
-					return fmt.Errorf("error while activating handle: %s", err)
+					//return fmt.Errorf("error while activating handle: %s", err)
+					continue
 				} else {
 					mod.Warning("error while activating handle: %s, %s", err, tui.Bold("interface might already be monitoring. retrying!"))
 					setRFMonMaybeFatal = true
